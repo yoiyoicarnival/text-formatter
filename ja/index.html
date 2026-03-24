@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>改行削除・テキスト整形ツール｜1秒で1行に</title>
+  <meta name="description" content="改行削除、空白削除、句読点変換ができる無料ツール">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>改行削除・テキスト整形ツール</h1>
+
+<textarea id="input" placeholder="ここにテキストを貼り付け"></textarea>
+
+<div>
+  <button onclick="removeLineBreaks()">改行削除</button>
+  <button onclick="removeEmptyLines()">空白行削除</button>
+  <button onclick="convertPunctuation()">句読点変換</button>
+  <button onclick="toLowerCaseText()">小文字化</button>
+</div>
+
+<textarea id="output" placeholder="結果"></textarea>
+
+<button onclick="copyText()">コピー</button>
+
+<br><br>
+<a href="/en/">English</a>
+
+<script src="/script.js"></script>
+</body>
+</html>
