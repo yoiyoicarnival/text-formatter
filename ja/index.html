@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="/style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8865673718352475"
      crossorigin="anonymous"></script>
-
 </head>
 <body>
 
@@ -16,11 +15,15 @@
 <textarea id="input" placeholder="ここにテキストを貼り付け"></textarea>
 
 <div>
-  <button onclick="removeLineBreaks()">改行削除</button>
-  <button onclick="removeEmptyLines()">空白行削除</button>
-  <button onclick="convertPunctuation()">句読点変換</button>
-  <button onclick="toLowerCaseText()">小文字化</button>
+  <label><input type="checkbox" id="lineBreak"> 改行削除</label>
+  <label><input type="checkbox" id="emptyLine"> 空白行削除</label>
+  <label><input type="checkbox" id="punct"> 句読点変換</label>
+  <label><input type="checkbox" id="lower"> 小文字化</label>
 </div>
+
+<br>
+
+<button onclick="processText()">変換</button>
 
 <textarea id="output" placeholder="結果"></textarea>
 
@@ -29,9 +32,12 @@
 <br><br>
 <a href="/about.html">このツールについて</a><br>
 <a href="/en/">English</a>
+
 <script src="/script.js"></script>
+
 <footer>
   <a href="/privacy.html">プライバシーポリシー</a>  
 </footer>
+
 </body>
 </html>

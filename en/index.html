@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="/style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8865673718352475"
      crossorigin="anonymous"></script>
-
 </head>
 <body>
 
@@ -16,11 +15,15 @@
 <textarea id="input" placeholder="Paste your text here"></textarea>
 
 <div>
-  <button onclick="removeLineBreaks()">Remove Line Breaks</button>
-  <button onclick="removeEmptyLines()">Remove Empty Lines</button>
-  <button onclick="convertPunctuation()">Convert Punctuation</button>
-  <button onclick="toLowerCaseText()">Lowercase</button>
+  <label><input type="checkbox" id="lineBreak">Remove Line Breaks</label>
+  <label><input type="checkbox" id="emptyLine">Remove Empty Lines</label>
+  <label><input type="checkbox" id="punct">Convert Punctuation</label>
+  <label><input type="checkbox" id="lower">Lowercase</label>
 </div>
+
+<br>
+
+<button onclick="processText()">Process</button>
 
 <textarea id="output" placeholder="Result"></textarea>
 

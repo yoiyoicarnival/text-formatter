@@ -25,3 +25,25 @@ function copyText() {
   document.execCommand("copy");
   alert("コピーしました / Copied!");
 }
+
+function processText() {
+  let text = document.getElementById("input").value;
+
+  if (document.getElementById("emptyLine").checked) {
+    text = text.replace(/^\s*[\r\n]/gm, "");
+  }
+
+  if (document.getElementById("lineBreak").checked) {
+    text = text.replace(/\n/g, "");
+  }
+
+  if (document.getElementById("punct").checked) {
+    text = text.replace(/、/g, ",").replace(/。/g, ".");
+  }
+
+  if (document.getElementById("lower").checked) {
+    text = text.toLowerCase();
+  }
+
+  document.getElementById("output").value = text;
+}
